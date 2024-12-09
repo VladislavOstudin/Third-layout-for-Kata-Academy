@@ -82,7 +82,7 @@ body {
     height: 70px;
     border: 2px solid #EAEAEA;
     border-radius: 7px;
-    background: url(../img/ic/go.svg) no-repeat 95% 50%;
+    background: white url(../img/ic/go.svg) no-repeat 95% 50%;
 }
 
 .brands__button:first-child {
