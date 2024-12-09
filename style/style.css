@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 767.98px;
+    background-color: #F8F8F8;
+}
+
+.brands-container {
+    font-family: 'TT Lakes', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.brands-container--title {
+    height: 60px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+.wrapper {
+    flex-grow: 1;
+}
+
+.swiper {
+    display: flex;
+    max-width: 768px;
+    width: 100%;
+    height: auto;
+}
+
+.swiper-wrapper {
+    box-sizing: content-box;
+    margin-bottom: 50px;
+}
+
+.brands {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+.brands-slider::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 90px;
+    width: 30px;
+    background: linear-gradient(270deg, transparent 10%, #F8F8F8 90%);
+    z-index: 10;
+}
+
+.brands-slider::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    height: 90px;
+    width: 30px;
+    background: linear-gradient(90deg, transparent 10%, #F8F8F8 90%);
+    z-index: 10;
+}
+
+.brands__button {
+    max-width: 230px;
+    height: 70px;
+    border: 2px solid #EAEAEA;
+    border-radius: 7px;
+    background: url(../img/ic/go.svg) no-repeat 95% 50%;
+}
+
+.brands__button:first-child {
+    margin-left: 20px;
+}
+
+.brands__button:last-child {
+    margin-right: 20px;
+}
+
+.brands__button--lenovo::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: white url(../img/brands/lenovo.png) no-repeat 20% 50%;
+    /* border: 1px solid green; */
+    margin: auto 0;
+}
+
+.brands__button--samsung::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url(../img/brands/samsung.png) no-repeat 20% 50%;
+    margin: auto 0;
+}
+
+.brands__button--apple::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url(../img/brands/apple.png) no-repeat 10% 50%;
+    margin: auto 0;
+}
+
+.brands__button--viewSonic::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url(../img/brands/viewSonic.png) no-repeat 20% 50%;
+    margin: auto 0;
+}
+
+.brands__button--bosch::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url(../img/brands/bosch.png) no-repeat 20% 50%;
+    margin: auto 0;
+}
+
+.brands__button--hp::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url(../img/brands/hp.png) no-repeat 10% 50%;
+    margin: auto 0;
+}
+
+.brands__button--acer::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url(../img/brands/acer.png) no-repeat 20% 50%;
+    margin: auto 0;
+}
+
+.brands__button--sony::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url(../img/brands/sony.png) no-repeat 20% 50%;
+    margin: auto 0;
+}
+
+/* Пагинация (точки) */
+.swiper-pagination {
+    display: block;
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    border-radius: 50%;
+    border: 2px solid #DDDDDD;
+    background-color: #DDDDDD;
+}
+
+.swiper-pagination-bullet-active {
+    border: 2px solid #B5B6BC;
+    background-color: #B5B6BC;
+}
+
+/* Кнопка Скрыть/Показать все */
+.read-more__button {
+    display: none;
+    white-space: nowrap;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    padding-left: 15px;
+    width: 160px;
+    height: 50px;
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.read-more__button--icon {
+    width: 20px;
+    height: 20px;
+    background: url(../img/ic/expand.svg) no-repeat 0 50%;
+    transform: rotate(-180deg);
+    transition: transform 1200ms;
+}
+
+/* .read-more__button:hover {
+    opacity: 0.5;
+} */
+
+@media (min-width: 768px) and (max-width: 1119.98px) {
+    body {
+        min-width: 768px;
+        margin: 0 auto;
+    }
+
+    .brands-container {
+        justify-content: flex-start;
+        align-items: start;
+        margin-bottom: 0;
+    }
+
+    .brands-container--title {
+        height: 30px;
+        margin-left: 20px;
+    }
+
+    .swiper {
+        display: flex;
+        min-width: 768px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-wrapper {
+        margin-bottom: 0;
+    }
+
+    .brands {
+        flex-flow: row wrap;
+        column-gap: 20px;
+        row-gap: 15px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        transition: max-height 1200ms;
+    }
+
+    .brands-slider::before,
+    .brands-slider::after {
+        display: none;
+    }
+
+    .brands__button:first-child {
+        margin-left: 0;
+    }
+
+    .brands__button:last-child {
+        margin-right: 0;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .read-more__button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1120px) {
+    body {
+        min-width: 1120px;
+        margin: 0 auto;
+    }
+
+    .brands-container {
+        justify-content: flex-start;
+        align-items: start;
+        margin-bottom: 0;
+    }
+
+    .brands-container--title {
+        height: 30px;
+        margin-left: 20px;
+    }
+
+    .swiper {
+        display: flex;
+        min-width: 1120px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-wrapper {
+        margin-bottom: 0;
+    }
+
+    .brands {
+        flex-flow: row wrap;
+        column-gap: 20px;
+        row-gap: 15px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        transition: max-height 1200ms;
+    }
+
+    .brands-slider::before,
+    .brands-slider::after {
+        display: none;
+    }
+
+    .brands__button:first-child {
+        margin-left: 0;
+    }
+
+    .brands__button:last-child {
+        margin-right: 0;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .read-more__button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+}
